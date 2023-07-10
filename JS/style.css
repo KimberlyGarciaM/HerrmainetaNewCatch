@@ -1,0 +1,107 @@
+body {
+    background-color: white;
+    padding: 50px 50px;
+}
+
+pre {
+    background-color: #eee;
+    overflow: auto;
+    width: 95%;
+}
+
+/*Prueba */
+textarea {
+    white-space: pre;
+}
+
+pre code,
+pre .line-number {
+    /* Ukuran line-height antara teks di dalam tag <code> dan <span class="line-number"> harus sama! */
+    font: normal normal 12px/14px "Courier New", Courier, Monospace;
+    color: black;
+    display: block;
+}
+
+pre .line-number {
+    float: left;
+    margin: 0 1em 0 -1em;
+    border-right: 1px solid;
+    text-align: right;
+}
+
+pre .line-number span {
+    display: block;
+    padding: 0 0.5em 0 1em;
+
+}
+
+
+pre .cl {
+    display: block;
+    clear: both;
+}
+
+.noselect {
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Old versions of Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.column2 {
+    width: 50%;
+    float: right;
+}
+.column1 {
+    width: 50%;
+    float: right;
+}
+
+.cont{
+    margin-top: 3%;
+}
+
+.line-number {
+user-select: none;
+}
+
+#previusButton{
+    float: left;
+}
+
+#nextButton{
+    float: right
+}
+
+#copyButtonNew,
+#copyButtonOld {
+padding: 5px 13px;
+border: 1px;
+cursor: pointer;
+}
+
+
+.bottons{
+    margin-top: 60%
+
+}
+
+.toast {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.504);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 9999;
+  }
+  
+  .toast-body {
+    margin-bottom: 0;
+  }
+

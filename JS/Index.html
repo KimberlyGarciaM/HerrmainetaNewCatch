@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="Catch.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">   
+    <link rel="stylesheet" href="./style.css">
+    <title>Mejoras de catch</title>
+</head>
+
+<body>
+    <!-- Seccion donde del textarea y el boton-->
+    <section class="position-relative">
+        <div class="d-flex flex-column align-items-center">
+            <textarea name="textarea" id="textarea" class="form-control border-primary" unselectable="on" cols="100"
+                rows="10"></textarea>
+            <br />
+            <br />
+            <button id="BotonIniciar" onclick="resetCode();" class="btn btn-primary btn-lg">
+                Mejorar el catch :)
+            </button>
+        </div>
+    </section>
+
+    <div class="cont" id="cont" style="display: none">
+        <div class="column2">
+            <h2>Código Nuevo</h2>
+            <button id="copyButtonNew" type="button" class="btn btn-success" 
+                onclick="copyCodeNew()">Copiar</button>
+            <pre class="preNew">
+                    <code id="codeNew"></code>
+                </pre>
+        </div>
+        <div class="column1" >
+            <h2>Código Anterior</h2>
+            <button id="copyButtonOld" type="button" class="btn btn-success" 
+                onclick="copyCodeOld()">Copiar</button>
+            <pre class="preOld">
+                    <code id="codeOld"></code>
+                </pre>
+        </div>
+
+        <div id="toast" class="toast">
+            <div id="toast-body" class="toast-body">
+                Código copiado al portapapeles
+            </div>
+        </div>
+    </div>
+
+    <div class = "bottons" id="cont2" style="display: none;">
+        <button id="previousButton" onclick="previousPage();" class="btn btn-danger">
+            Anterior
+        </button>
+        <div id="pageCounter">
+            <span id="currentPage"></span> de <span id="totalPages"></span>
+        </div>
+        <button id="nextButton" onclick="nextPage();"  class="btn btn-success">
+            Siguiente
+        </button>
+    </div>
+
+    <script>
+        function handlePaste(event) {
+            event.preventDefault();
+            var text = event.clipboardData.getData("text/plain");
+            document.getElementById("textarea").value = text;
+        }
+
+        document.getElementById("textarea").addEventListener("paste", handlePaste);
+    </script>
+
+
+</body>
+<footer>
+    
+</footer>
+
+</html>
